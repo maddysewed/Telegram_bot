@@ -1,7 +1,7 @@
 import telebot
 import random
 from telebot import types
-client = telebot.TeleBot('1839508249:AAFx34PDwerE9_Ge81jHZvl-3XPNrB_9MW4')   
+client = telebot.TeleBot('TOKEN')   
 @client.message_handler(content_types=['text'])
 
 @client.message_handler(commands=['/hi'])
