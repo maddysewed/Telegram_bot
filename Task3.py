@@ -29,7 +29,7 @@ def start(message):
 
 def user_letter(message):
     line = ''
-    with open('c:\\Users\\H P\\Desktop\\Bot\\times.txt') as inf:
+    with open('times.txt') as inf:
         for line in inf:
             line = line.strip()
     times = int(line)
@@ -65,12 +65,12 @@ def user_letter(message):
                     client.send_message(message.from_user.id, '\nEnter a letter - ')
                     client.register_next_step_handler(message, user_letter)
                 times += 1
-                update_times = open('c:\\Users\\H P\\Desktop\\Bot\\times.txt', 'w')
+                update_times = open('times.txt', 'w')
                 update_times.write(str(times))
                 update_times.close()
             if b == a:
                 client.send_message(message.from_user.id,'\nGOOD JOB')
-                ouf = open('c:\\Users\\H P\\Desktop\\Bot\\times.txt', 'w')
+                ouf = open('times.txt', 'w')
                 ouf.write('1')
                 ouf.close()
                 times = 0
@@ -81,7 +81,7 @@ def user_letter(message):
                 for j in a:
                     c += j
                 client.send_message(message.from_user.id,'\nFalure =(\nThe right word was: ' + c)
-                ouf = open('c:\\Users\\H P\\Desktop\\Bot\\times.txt', 'w')
+                ouf = open('times.txt', 'w')
                 ouf.write('1')
                 ouf.close()
                 times = 0
