@@ -55,7 +55,7 @@ def user_letter(message):
                     client.send_message(message.from_user.id, '\nEnter a letter - ')
                     client.register_next_step_handler(message, user_letter)
                 times += 1
-                update_times = open('c:\\Users\\H P\\Desktop\\Bot\\times.txt', 'w')
+                update_times = open('times.txt', 'w')
                 update_times.write(str(times))
                 update_times.close()
             else:
